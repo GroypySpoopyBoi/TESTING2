@@ -7,11 +7,6 @@ language:
 before_install:
     - pip install --user cpp-coveralls
 
-addons:
-  sonarcloud:
-    organization: "groypyspoopyboi"
-    token:
-      secure: "iTQG1XFqO6o0Ou0sCp1X6FGwfxA19Vfa7y+oHjh9fxO8CvYAkBj5LcQm6BjtsFFSBBvqLOu9CCrJPVY5XXRY2C/9f0EhTbdeq4br/QBoNux24OR897DTZ+NqXfmNPTjVMtBRKGzWFSnD1NoOWzMKZUKtScmqxtPZunmoDxjm06GZRSMc0qyIRulMu/aRIBYArEj0MtBE+bG/IPv9Mdp1kR5D7ir4as6DnFBP55xujSS/wwOMd9P56g5duG+NMwe0a+Rp/Wd68onJorLZTqzQhtyjOSG8i3hHFR+5duTUGkwWKFb1hFG5ALLl0Q1TGmThI309vf2UVqfv84PCiNpFndgqTFUNEEODRw3U0QLEk8/xoHFpuC4udNztXQhrU7YVifx6kwGXgTLtUuSwUrZJaeuntd4P24Co9fMSiVhYiuEI836H6yIJxA5DdVhkWqO/9NJB9wOFYrttCi3n3RSKwfxz4g+g5Tt8X+oz0snSHd2FgIHaI34dht/htmOYCbrrTI7CQNr1n8kQzeoVbxdfIRdE8P2GaXl5DAEt74WckvAJly93VbkZLOJ8qT1UimCq8snyIPbu2h3S1kcl9BwARhYz5RKRUsU7RBPMyw5e6+yflUuo1LD9uZoMVLKS0dcL4o+Es4o2dHF0XQOYyoWm0UyAu6jPsWHTbeMhBPuP5cA="
 
 script:
     - qmake 

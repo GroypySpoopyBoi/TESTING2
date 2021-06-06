@@ -6,7 +6,11 @@ language:
             
 before_install:
     - pip install --user cpp-coveralls
-
+    
+addons:
+  sonarcloud:
+    organization: groypyspoopyboi
+    token: $SONAR_TOKEN
 
 script:
     - qmake 

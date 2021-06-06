@@ -82,12 +82,6 @@ int main()
             continue;
         }
 
-        /* Выводим текст */
-        if (cmd == "show") {
-            show(txt);
-            continue;
-        }
-
         /* Завершаем работу редактора */
         if (cmd == "q") {
             std::cout << "Bye!\n";

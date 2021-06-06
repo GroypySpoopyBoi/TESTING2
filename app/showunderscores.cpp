@@ -23,7 +23,7 @@ static void show_line(int index, std::string contents, int cursor, void *data)
     UNUSED(data);
 
     /*Выделяем память под копию текущей строки */
-    char *contents_copy = new char;
+    char *contents_copy = (char *) malloc((MAXLINE + 1) * sizeof(char));
 
     /*Копируем текующую строку */
     strcpy(contents_copy, contents.c_str());

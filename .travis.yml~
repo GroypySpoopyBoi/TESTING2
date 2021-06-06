@@ -1,0 +1,29 @@
+language:
+    - cpp
+            
+before_install:
+    - pip install --user cpp-coveralls
+
+addons:
+  sonarcloud:
+    organization: "groypyspoopyboi"
+    token:
+      secure: "YMfhy42/3cikCTqy22bB3gUuygV7tmSpXX7fZYPVB7O6wTd8sEUeKBLqKgHBisl8Ug7Rlm/Q4ojCehz4mcZ/QJL63wjlhJ13DQrXH+KZqLwti2yAXWLuP3SUD7EQxooCUZeymQIaTBikimbLYCWoO6us5T4nRHdlY3pNTLiKgBROF+q3BZ9Z/U00T/53sTG3ng2VyNAzc2k0UYMJPJQmPXDF9G6B3o+ZtfPaFIK/5hMItj3z+8NTTH7d8nZ+HJFek5NPLvf/YGYxHcf4U4ZECzC8R1M44OzHjE91Cri1kLk2IhZlXAEyVYfrCms3m/rVH8B8jhMDLc96duZ41DDhL8RS+0wITXJ6sZiJviBJOt6v4HPkH0UbVOEKVTVEzQf/cW+Zx/AoeKGlcPbxcf96uBnR845pf0/yjP6C/HYNUQKg6TutzUAtjqUY07pcwyeRoe3bknaJpPCSLK41bFZhA56lDjsnDL86VLU2ViyZzmTr9Ylj+ukhxUXpIqI2sqvlJzb86pANPCfg2VLAEpmS3K6Y2vxVywRDSsEP7fIsxfeVjXR4s5lWnXSYSLXMewsShdpp/Vd1+2qpRPh27fCzw1dgtVFUlbPSUYTegVUUhj7GmoDJsoiokcmBQLDMk5AUFIpVlN9Xf0sg1Uvh11oZ0CGSMTFV6SLHweMBOqStNd0="
+
+script:
+    - qmake 
+    - make
+    - ./tests/tests
+    
+after_success:
+    - coveralls --root . -E ".*external.*" -E ".*tests.*"
+    - build-wrapper-linux-x86-64 --out-dir bw-output make clean all
+    - sonar-scanner -Dsonar.cfamily.build-wrapper-output=bw-output
+    
+cache:
+    directories:
+    - '$HOME/.m2/repository'
+    - '$HOME/.sonar/cache'
+    
+notifications:
+    email: false 

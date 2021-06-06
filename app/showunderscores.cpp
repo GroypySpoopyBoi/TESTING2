@@ -38,5 +38,4 @@ static void show_line(int index, std::string contents, int cursor, void *data)
     /* Выводим копию строки на экран */
     printf("%s\n", contents_copy);
 
-    delete [] contents_copy;
 }

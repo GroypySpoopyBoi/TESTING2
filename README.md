@@ -3,4 +3,4 @@
 
 [![Build Status](https://travis-ci.com/GroypySpoopyBoi/TESTING2.svg?branch=main)](https://travis-ci.com/GroypySpoopyBoi/TESTING2)
 
-[![Coverage Status](https://coveralls.io/repos/github/GroypySpoopyBoi/Testlab2/badge.svg?branch=main)](https://coveralls.io/github/GroypySpoopyBoi/Testlab2?branch=main)
+[![Coverage Status](https://coveralls.io/repos/github/GroypySpoopyBoi/TESTING2/badge.svg?branch=main)](https://coveralls.io/github/GroypySpoopyBoi/TESTING2?branch=main)
